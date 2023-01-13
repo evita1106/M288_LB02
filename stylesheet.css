@@ -1,0 +1,308 @@
+
+html {
+    font-family: Futura;
+}
+h1 {
+    font-family: Futura;
+    text-align: center;
+    margin-top: 25%;
+    margin-bottom: 2%;
+    font-size: 30px;
+    border: 3px solid;
+
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    margin-top: -80%;
+    margin-bottom: 10%;
+}
+h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: -130%;
+    font-family: Futura;
+}
+p {
+    font-family: Futura;
+}
+
+title{
+    color: black;
+}
+
+
+/** * Captcha */
+
+.abstand.captcha-container{
+    outline: 1px black;
+    margin-top: 6%;
+    font-family: Futura;
+    margin-bottom: 10%;
+}
+.titlecaptcha{
+    margin-top: -5%;
+    font-weight: bold;
+}
+body {
+    height: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    margin-top: 50%;captcha
+}
+
+.form-signin {
+    max-width: 25rem;
+    margin: auto;
+}
+.captcha-container {
+    min-width: 50%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 20px;
+    font-family: 'poppins' , sans-serif;
+    margin-top: -1%;
+    color: black;
+}
+.header {
+    color: black;
+    font-size: 14px;
+    width: 80%;
+    text-align: left;
+
+}
+.securityCode {
+    width: 55%;
+    height: 150px;
+    background: url("striche2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 3px;
+}
+.securityCode p {
+    text-align: center;
+    line-height: 150px;
+    color: #000;
+    font-family: "Futura";
+    font-size: 180%;
+    font-weight: bold;
+    letter-spacing: 10px;
+    user-select: none;
+}
+.securityCode .icons {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+.securityCode .icons .fas {
+    font-size: 1.5rem;
+    color: #000;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.userInput {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2%;
+    color: black;
+
+
+
+
+}
+.userInput input {
+    border: 2px solid;
+    border-radius: 3px;
+
+
+
+}
+
+.btn {
+
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.15s ease;
+    height: 13%;
+    margin-top: 2.2%;
+    border-radius: 3px;
+border: 3px solid;
+}
+
+.btn:hover {
+    background: #ed7363;
+    color: black;
+
+}
+
+
+
+/** * Ampel*/
+
+
+
+
+#password-strength-status {
+    padding: 5px 10px;
+    color: #FFFFFF;
+    border-radius: 4px;
+    margin-top: 5px;
+
+}
+
+.medium-password {
+    background-color: #CFFADD;
+    border: #CFFADD 1px solid;
+}
+
+.weak-password {
+    background-color: #FF9990;
+    border: #FF9990 1px solid;
+}
+
+.strong-password {
+    background-color: #9ED2C0;
+    border: #9ED2C0 1px solid;
+}
+input[type=text], input[type=password],input[type=email] {
+    width: 100%;
+    padding: 12px 20px; ;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    color: black;
+    border-color: black;
+    border-radius: 3px;
+    border-width: 1px;
+
+
+}
+
+
+.button1 {
+    width: 49%;
+    height: 4.5rem;
+    background-color:#ed7363;
+    color:  #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-left: 25.6%;
+    border-radius: 3px;
+    margin-top: 8%;
+    outline: none;
+
+}
+.button2{
+    width: 45%;
+    height: 2.5rem;
+    background-color:#ed7363;
+    color:  #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-top: 53%;
+    margin-left: 15.6%;
+    border-radius: 3px;
+
+}
+.button {
+    background-color:#ffffff;
+    color:  #ed7363;
+    border: none;
+    height: 300%;
+
+}
+
+.buttonloginpage {
+    margin-left: 47%;
+}
+.buttonloginpage2 {
+    margin-left: 47%;}
+button:hover {
+    opacity: 0.8;
+}
+
+
+/** * Allgemein */
+
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+
+}
+img.avatar {
+    width: 30%;
+    border-radius: 200%;
+    border: solid 1px;
+}
+.container {
+    width: 50%;
+    margin-left: 36%;
+    margin-top: -5%;
+    margin-bottom: 5%;
+
+.container2{
+    padding: 16px;
+    font-family: Futura;
+    width: 50%;
+    margin-left: 23%;}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+.text{
+    font-family: Futura;
+    border-radius: 3%;
+    color: black;
+
+}
+
+input.text {
+    font-family: Futura;
+
+
+}
+
+.pswtext {
+    color: #9e5853;
+
+}
+.titlepassword{
+    margin-top: 20%;
+}
+}
+
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+
+    .captcha {
+        margin-left: 25.6%;
+
+    }
+
+    .abstand {
+        width: 48%;
+        margin-left: 30%;
+        margin-top: -1%;
+
+    }
+
+
+    .bg-mynav {
+        background-color: #2c3e50;
+    }
+
+}
+

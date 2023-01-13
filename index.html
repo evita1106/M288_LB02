@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LB02</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../../Desktop/Projekt.02/stylesheet.css">
+    <link rel="login" href="../../../Desktop/Projekt.02/login.html">
+    <link rel="password" href="password.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../Desktop/Projekt.02/Avatar_2.png">
+
+</head>
+<body>
+
+
+<form id="login-form">
+    <h2>LB02 Login Page</h2>
+    <div class="imgcontainer">
+        <img src="../../../Desktop/Projekt.02/Avatar_2.png" alt="Avatar" class="avatar">
+    </div>
+
+
+<!-- HTML code for the login form -->
+
+    <label for="username" required style="font-family: Futura; color: black">Username:</label><br>
+    <input  placeholder="Enter email" type="email" id="username"  name="username" required style="font-family: Futura;"><br>
+    <label for="password" required style="font-family: Futura; color: black">Password:</label><br>
+    <input placeholder="Enter password" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Your password requires more character and must be strong" id="password" class="text" required style="font-family: Futura;color: black"/>
+    <div id="password-strength-status"></div>
+
+<! -- Captcha -->
+
+    <div class="abstand captcha-container">
+        <p class="titlecaptcha" style="font-family: Futura">Captcha:</p>
+        <div class="header"></div>
+        <div class="securityCode">
+            <p id="code"></p>
+            <div class="icons">
+            <span class="changeText">
+                <i class="fas fa-sync-alt"></i>
+            </span>
+            </div>
+        </div>
+        <div class="userInput">
+            <input class="text" placeholder="Type the text here" type="text" name="captcha" required/>
+            <br>
+
+
+
+
+
+
+            <input class="btn button1" type="submit" value="Submit">
+    <link rel="stylesheet" href="../../../Desktop/Projekt.02/stylesheet.css">
+</form>
+
+
+
+
+<!-- Display message when login is successful or unsuccessful -->
+<div id="message" style="margin-top:10%; color: red; font-size: 25px; margin-left: 36%"  ></div>
+
+
+<script>
+    // JavaScript code to validate the login form
+    const loginForm = document.getElementById('login-form');
+    const message = document.getElementById('message');
+    const passwordStrength = document.getElementById('password-strength');
+
+
+
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+
+
+// Get the values of the username and password fields
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+
+
+// Check if the username and password match the expected values JSON
+        if (username === 'usr@bzz.ch' && password === 'Passwordbzz1!'){
+            message.textContent = 'Valid input';
+            location.href = "login.html"
+        } else {
+            message.textContent = 'Invalid input';
+        }
+
+    });
+
+</script>
+<script>
+    $(document).ready(function () {
+        $("#password").on('keyup', function(){
+            var number = /([0-12])/;
+            var alphabets = /([a-zA-Z])/;
+            var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+            if ($('#password').val().length < 12) {
+                $('#password-strength-status').removeClass();
+                $('#password-strength-status').addClass('weak-password');
+                $('#password-strength-status').html("Weak (should be at least 12 characters and one number.)");
+            } else {
+                if ($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) {
+                    $('#password-strength-status').removeClass();
+                    $('#password-strength-status').addClass('strong-password');
+                    $('#password-strength-status').html("Strong");
+                } else {
+                    $('#password-strength-status').removeClass();
+                    $('#password-strength-status').addClass('medium-password');
+                    $('#password-strength-status').html("Medium");
+                }
+            }
+// Validate length
+            if(myInput.value.length >= 12) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+            } else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+            }
+        });
+    });
+
+
+</script>
+<!-- Captcha -->
+<script>
+
+    const changeTextBtn = document.querySelector('.changeText') ;
+    const readTextBtn = document.querySelector('.readText') ;
+    const code = document.querySelector('#code') ;
+    const input = document.querySelector('.userInput input') ;
+    const submitBtn = document.querySelector('.btn') ;
+
+    changeTextBtn.addEventListener('click' , () => {
+        code.textContent = createCaptcha() ;
+    }) ;
+    window.addEventListener('load' , () => {
+        code.textContent = createCaptcha() ;
+    }) ;
+
+    function createCaptcha()  {
+        let letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+            'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', '0','1','2','3','4','5','6','7','8','9'];
+        let a = letters[Math.floor(Math.random() * letters.length)] ;
+        let b = letters[Math.floor(Math.random() * letters.length)] ;
+        let c = letters[Math.floor(Math.random() * letters.length)] ;
+        let d = letters[Math.floor(Math.random() * letters.length)] ;
+        let e = letters[Math.floor(Math.random() * letters.length)] ;
+        let f = letters[Math.floor(Math.random() * letters.length)] ;
+        let g = letters[Math.floor(Math.random() * letters.length)] ;
+        let code = a + b + c + d + e + f + g ;
+        return code ;
+    }
+
+    submitBtn.addEventListener('click',() => {
+        let val = input.value;
+        let generatedCode = code.textContent;  // Der generierte Code wird in eine separate Variable gespeichert.
+        if(val === '') {
+            alert('Please Enter The code');
+        } else if(val === generatedCode) {  // Überprüfen, ob der eingegebene Code dem generierten Code entspricht.
+            alert('Captcha is valid');
+        } else {
+            alert('Captcha is invalid');
+        }
+    });
+
+</script>
